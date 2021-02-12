@@ -30,8 +30,8 @@
 		//結果の取得（連想配列で受け取る）
 		$result1 = $stm->fetchAll(PDO::FETCH_ASSOC);
 
-		$total = 0;
 		foreach ($result1 as $r) {
+			$total = 0;
 			$sql = "select * from purchase_detail where purchase_id = :purchase_id";
 			$stm = $pdo->prepare($sql);
 			$stm->bindValue(':purchase_id',$r['id'],PDO::PARAM_STR);
