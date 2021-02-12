@@ -14,7 +14,7 @@
 	require 'menu.php';
 	if (isset($_SESSION['customer'])){ ?>
 		<!-- ログイン後の場合 -->
-		<!-- ???テーブルからすべて表示する -->
+		<!-- purchase、purchase_detail、productテーブルからすべて表示する -->
 		<?php
 		//MySQLデータベースに接続する
 		require 'db_connect.php';
